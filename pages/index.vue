@@ -1,66 +1,35 @@
 <template>
   <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        SHCP
-      </h1>
-      <h2 class="subtitle">
-        My delightful Nuxt.js project for a company website
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
-    </div>
+    <video class="vid" autoplay loop muted>
+      <source src="~/assets/video/2016SHCP_showreel.mp4" type="video/mp4">
+    </video>
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
 export default {
-  components: {
-    Logo
+  head() {
+    return {
+      title: 'Stay High Crew Production',
+      meta: [
+        { name: 'keywords', content: 'stayhighcrew proudction, stayhighcrew, phate, mj116'},
+        { hid: 'description', name: 'description', content: 'Stayhighcew Production Home page'},
+      ]
+    }
   }
 }
 </script>
 
-<style>
-
+<style scoped>
 .container {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  overflow: hidden;
 }
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.vid {
+  min-height: 100%;
+  min-width: auto;
 }
 </style>
