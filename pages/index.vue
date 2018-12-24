@@ -27,9 +27,10 @@ export default {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background: #000
 }
 .vid {
-  min-height: 100%;
-  min-width: auto;
+  height: 100%;
+  min-width: 100%;
 }
 </style>

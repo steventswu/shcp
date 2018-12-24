@@ -29,7 +29,7 @@ export default {}
 <style>
 /* navigation styles start here */
 header {
-  background: transparent;
+  background: #000;
   text-align: center;
   position: fixed;
   z-index: 999;
@@ -50,8 +50,8 @@ header {
 .nav-toggle-label {
   position: absolute;
   top: 0;
-  right: 0;
-  margin-right: 1em;
+  left: 0;
+  margin-left: 1em;
   height: 100%;
   display: flex;
   align-items: center;
@@ -65,11 +65,17 @@ header {
   width: 2em;
   border-radius: 2px;
   position: relative;
+  transform: rotate(0deg);
+	opacity: 1;
 }
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
   content: '';
   position: absolute;
+  transition: transform 0.35s ease-in-out;
+}
+.nav-toggle-label span {
+  transition: opacity 1s ease-in-out;
 }
 .nav-toggle-label span::before {
   bottom: 7px;
@@ -77,12 +83,31 @@ header {
 .nav-toggle-label span::after {
   top: 7px;
 }
+.nav-toggle:checked ~ label span {
+  height: 12px;
+	opacity: 1;
+	background-color: transparent;
+}
+.nav-toggle:checked ~ label span::before{
+  position: relative;
+	left: 0;
+	top: 7px;
+	transform: rotate(135deg);
+	opacity: 0.9;
+}
+.nav-toggle:checked ~ label span::after{
+  position: relative;
+	left: 0;
+	top: 5px;
+	transform: rotate(-135deg);
+	opacity: 0.9;
+}
 nav {
   position: absolute;
   text-align: left;
   top: 100%;
   left: 0;
-  background: var(--background);
+  background: #000;
   width: 100%;
   transform: scale(1, 0);
   transform-origin: top;
