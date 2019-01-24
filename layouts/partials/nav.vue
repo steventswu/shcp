@@ -7,10 +7,10 @@
     <nav>
       <ul>
         <li>
-          <nuxt-link to="/about">About</nuxt-link>
+          <nuxt-link to="/work">Work</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/work">Work</nuxt-link>
+          <nuxt-link to="/about">About</nuxt-link>
         </li>
         <li>
           <nuxt-link to="/contact">Contact</nuxt-link>
@@ -144,7 +144,7 @@ nav a {
   }
   header {
     display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    grid-template-columns: 1fr auto minmax(768px, 1fr) 1fr;
   }
   .logo {
     grid-column: 2 / 3;
